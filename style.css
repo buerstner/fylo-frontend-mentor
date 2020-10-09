@@ -61,10 +61,14 @@ body {
 
 #storage {
     width: 100%;
-    height: 100%;
+    height: 97%;
     display: inline-flex;
     align-items:center;
     justify-content:center;
+}
+
+.attribution {
+    height: 3%;
 }
 
 /* === BACKGROUND === */
@@ -112,6 +116,7 @@ body {
     padding: 1.5rem;
     color: hsl(243, 100%, 93%);
     margin-left: .5rem;
+    position: relative;
 }
 
 #total-storage {
@@ -145,7 +150,34 @@ body {
     float: right;
 }
 
+#remaining-storage-box {
+    width: 160px;
+    height: 60px;
+    background-color: #fff;
+    color: hsl(229, 7%, 55%);
+    position: absolute;
+    top: -40px;
+    right: 25px;
+    border-radius: 15px;
+    text-align: center;
+    padding-top: 10px;
+}
+#remaining-storage {
+    font-size: 2.2rem;
+    color: #000;
+    font-weight: 700;
+}
 
+#box-arrow {
+    position: absolute;
+    right: 25px;
+    top: -30px;
+    border-top: 35px solid transparent;
+    border-right: 35px solid #FFF;
+    border-bottom: 35px solid transparent;
+    border-left: 35px solid transparent;
+
+}
 
 /* === FOOTER === */
 .attribution {
@@ -155,4 +187,34 @@ body {
 
 .attribution a {
     color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (max-width: 375px) {
+
+    body {
+        background-image: url("./images/bg-mobile.png");
+    }
+
+    #storage {
+        width: 100%;
+        height: 97%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .panel {
+        width: 80%;
+        margin-right: auto;
+        margin-left: auto;
+    
+    }
+    .usage {
+        width: 80%;
+
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+
 }
